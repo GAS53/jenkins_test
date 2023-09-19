@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Powerz_project</title>
+    
+</head>
+    <body>
+        {% block head %}
+            
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{% url 'mainapp:new_project' %}" class="nav-link px-2 link-secondary">Новый проект</a></li>
+                <li><a href="#" class="nav-link px-2 link-secondary">Домашняя страница</a></li>
+                <li><a href="all_projects" class="nav-link px-2">Все проекты</a></li>
+                <li><a href="#" class="nav-link px-2">Справка</a></li>
+            </ul>
+            <button type="button" class="btn btn-outline-primary me-2">Войти</button>
+        
+        {% endblock head %}
+
+        <div class="container">
+            {% block content %}
+                <h1>Пустой Базовый шаблон </h1>
+                
+            {% endblock content %}
+        </div>
+
+        {% block footer %}
+
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Домашняя страница</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Справка</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Powerz</p>
+      {% endblock footer %}
+
+        <script src= "{% static 'js/bootstrap.bundle.min.js' %}" ></script>
+    </body>
+</html>
+

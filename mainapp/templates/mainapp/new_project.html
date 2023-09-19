@@ -1,0 +1,23 @@
+
+{% extends 'mainapp/base.html' %}
+
+        
+{% block content %}
+    <h1>Страница загрузки файлов проекта</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Добавить XML</label>
+            <input name="xml_file" type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+
+        <div class="form-group">
+                <label for="exampleFormControlFile1">Добавить PDF</label>
+                <input name="pdf_file" type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+           
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+        
+
+{% endblock content %}
